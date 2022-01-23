@@ -12,7 +12,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_konstruktori_ei_luo_tyhjaa_varastoa_pienella_tilavuudella(self):
         self.varasto= Varasto(-10)
-        self.assertAlmostEqual(self.varasto.tilavuus, 1)
+        self.assertAlmostEqual(self.varasto.tilavuus, 0)
     
     def test_ei_luo_varastoa_jos_saldo_alle_nolla(self):
         self.varasto=Varasto(10, -5)
