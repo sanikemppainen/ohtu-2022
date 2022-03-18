@@ -30,6 +30,8 @@ jobs:
           python-version: 3.8
       - name: Install Poetry
         run: pip install poetry
+      - name: Lint code
+        run: poetry run pylint src
       - name: Install dependencies
         run: poetry install
       - name: Run tests
